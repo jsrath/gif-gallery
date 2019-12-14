@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(#dddddd, #333333) no-repeat;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  line-height: 2;
+  color: #fff;
+  text-shadow: 0 8px 6px #4d4d4d;
+  letter-spacing: 0.1rem;
+  margin-bottom: 20px;
+}
+
+.site-container {
+  display: flex;
+  align-items: space-around;
+  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.search-container {
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.search-form {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery-container {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery {
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+  font-size: 0;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.gallery-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-inner img {
+  min-height: 300px;
+  min-width: 400px;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 300px;
+  background-color: white;
+  color: black;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+.thumbnails-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.thumbnails-inner img {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 5px;
+  object-fit: cover;
+  box-shadow: 0 8px 6px -6px black;
+  cursor: pointer;
+}
+
+.thumbnails-inner img:hover {
+  box-shadow: inset 0 0 10px #fff;
+}
+
+.current {
+  border-top: 5px solid white;
+}
+
+input[type="submit"] {
+  background-color: #fff;
+  padding: 10px 30px;
+  color: #000;
+  white-space: nowrap;
+  box-shadow: 0 10px 10px -10px black;
+  border-color: transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-left: 5px;
+}
+
+.search-box:hover, .search-box:focus {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.search-box {
+  padding: 10px;
+  width: 70%;
+  border-color: transparent;
+  box-shadow: 0 18px 16px -16px black;
+}
+
+@media screen and (max-width: 1000px) {
+  .thumbnails-inner {
+    justify-content: center;
+  }
+  .thumbnails-inner img {
+    margin-bottom: 10px;
+  }
+  .gallery-container {
+    width: 100%;
+  }
+  .search-container {
+    width: 100%;
+  }
+  .search-form {
+    width: 80%;
+    max-width: 500px;
+  }
+}
